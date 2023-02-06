@@ -1,0 +1,13 @@
+/*Para el caso de id en HTML se ocupa #id*/
+#titulo  {
+    color: tomato;
+}
+
+/*Para el caso de class en HTML se ocupa .class*/
+p.texto{
+    color: slateblue;
+}
+
+p.especial{
+    color: mediumseagreen;
+}
