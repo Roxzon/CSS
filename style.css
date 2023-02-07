@@ -11,3 +11,208 @@ p.texto{
 p.especial{
     color: mediumseagreen;
 }
+
+div p {
+    color: aquamarine;
+}
+
+div h2, div h3{
+    color: brown;
+}
+
+* {
+    font-size: 24px;
+    /* color: black; */
+}
+
+/* 
+    * es para seleccionar todos los elementos del HTML
+    Si un elemento ya tiene una especificacion no se
+    puede cambiar de nuevo
+*/
+
+/*
+.color {
+    color: #ff0000; 
+}
+.color {
+    color: rgb(0, 255, 255);
+}
+*/
+
+.color {
+    /* border: 5px black solid; */
+    /*
+        opciones más usadas además de solid:
+        dotted
+        dashed
+        solid
+        double
+        groove
+        ridge
+        inset
+        outset
+        none
+        hidden
+    */
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+
+#fondo {
+    background-color: rgba(255, 0, 0);
+    /* opacity: 0.3; */
+    height: 200px;
+    background: #f00 url('img/1291915.png') repeat-y center bottom / 100px 100px;
+}
+
+/*Box model, como se posiciona cada elemento html en nuestro documento*/
+/*Todo elemento tiene un margin, border, padding y contenido*/
+.margen {
+    background-color: chocolate;
+    margin: 15px; /*Fuera del elemento*/
+    padding: 30px 15px 5px; /*Dentro del elemento*/
+    border: solid 1px black;
+    height: 100px;
+    width: 50px;
+    overflow: scroll;
+    /*Outline*/
+    outline: 1px solid red;
+}
+
+/*text-align nos modificar nuestro texto*/
+.text {
+    /*Cambio de fuente, en caso de no encontrar la primera, pasa a la siguiente*/
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; 
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px blue; /*difuminado de letra*/
+}
+
+/*Selecciona cuando el link no ha sido visitado*/
+a:link {
+    color: blueviolet;
+}
+
+/*Links visitados*/
+a:visited {
+    color:gray;
+}
+
+/*Cuando pasamos el mouse por encima del link*/
+a:hover {
+    color: red;
+}
+
+/*Es cuando pinchamos el link*/
+/*Active debe ser despues de hover, tienen un orden*/
+a:active {
+    color: yellow;
+}
+
+ul {
+    background-color: cyan;
+    list-style-type: circle;
+    /* padding-left: 0; */
+    /* list-style-position: inside; */
+}
+
+/*Tabla*/
+table {
+    width: 100%;
+    border-collapse: collapse; /*Sin separacion entre las celdas*/
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    text-align: left;
+}
+
+/*even signifca impar y odd significa par*/
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+
+/*Display*/
+span {
+    display: block;  /*block es por defecto en la mayoria de elementos HTML*/
+    /* display: none; */
+    /* visibility: hidden; */
+    max-width: 300px; /*Ancho máximo en elementos*/
+    background-color: #f00;
+}
+
+.inline {
+    display: inline; 
+    /*
+    Etiquetas HTML que usan inline span, links, img
+    */
+}
+
+
+#position {
+    /*
+        Static valor por defecto de todos los elementos de HTML
+        Relative es una posicion relativa de a donde deberia estar posicionado
+        Fixed le indica que este debe de tener una posicion con respecto a lo que 
+        vemos en el navegador
+        Absolute se posociona con el elemento padre más cercano (body) por ejemplo
+        Sticky combinación entre static y relative
+    */
+    position: sticky;
+    left: 20px;
+    top: 25px;
+}
+
+/*Propiedad que hace flotar a nuestros elementos HTML*/
+/*float*/
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0;
+    padding: 10px 0px;
+    width: 33.3%; /*Estamos colocando 3 columnas con esta configuracion*/
+}
+
+/*Ayuda de como usar inline-block para un buen uso de menús*/
+.inline-block {
+    display: inline-block; /*Diferencia entre inline e inline-block*/
+    height: 55px;
+    background-color: red;
+}
+
+/*Centrar un elemento*/
+/*Se indica siempre un ancho y este no puede ser del 100% debe ser menor al 100%*/
+.center {
+    padding: 50px 0;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: aqua;
+}
